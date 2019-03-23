@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment_SignUp">
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <FrameLayout
+            android:id="@+id/frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            >
+            <ImageView
+                android:id="@+id/iv1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/banner2"
+
+                />
+            <ImageView
+                android:id="@+id/back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/arrow_left"
+                android:layout_marginTop="30dp"
+
+                />
+
+            <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CREATE ACCOUNT WITH US"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20dp"
+                    android:layout_gravity="center_horizontal"
+
+                    android:layout_marginTop="20dp"
+
+                    />
+
+            <ImageView
+                android:id="@+id/iv2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@mipmap/pic"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="65dp"
+
+                />
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/camera_icon"
+
+                android:layout_marginTop="70dp"
+                android:layout_marginLeft="60dp"
+
+                />
+
+       </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/ll1"
+        android:layout_marginTop="20dp"
+
+        android:layout_marginBottom="40dp"
+        >
+
+
+        <EditText
+
+            android:id="@+id/et1"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:hint="First Name*"
+            android:background="@drawable/shape_edit_text"
+
+            android:paddingLeft="20dp"
+            android:inputType="textPersonName|textCapWords"
+            android:maxLines="1"
+
+            />
+
+        <EditText
+            android:id="@+id/et2"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:hint="Last Name*"
+            android:background="@drawable/shape_edit_text"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="20dp"
+            android:inputType="textPersonName|textCapWords"
+            android:maxLines="1"
+            />
+
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            >
+
+            <EditText
+                android:id="@+id/et_phoneNumber"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape_edit_text"
+                android:hint="Phone Number*"
+
+                android:paddingLeft="80dp"
+                android:inputType="phone"
+                android:digits="0123456789"
+                android:imeOptions="actionNext"
+                android:maxLength="10"
+                android:maxLines="1"
+
+
+
+                />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginLeft="10dp"
+
+                android:textSize="3sp"
+                android:background="@drawable/shape_spinner"
+
+
+                >
+
+
+            </Spinner>
+
+        </FrameLayout>
+
+        <EditText
+            android:id="@+id/et4"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:hint="Password *"
+            android:background="@drawable/shape_edit_text"
+
+            android:layout_marginTop="20dp"
+
+            android:paddingLeft="20dp"
+            android:inputType="textWebPassword"
+
+            android:password="true"
+            android:maxLines="1"
+
+            />
+
+
+        <EditText
+            android:id="@+id/et5"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:hint="Confirm Password*"
+            android:background="@drawable/shape_edit_text"
+
+            android:layout_marginTop="20dp"
+
+            android:paddingLeft="20dp"
+            android:inputType="textWebPassword"
+
+            android:password="true"
+            android:maxLines="1"
+            />
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            >
+        <EditText
+            android:id="@+id/dob"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:hint="Select Your DOB*"
+
+            android:background="@drawable/shape_edit_text"
+
+            android:layout_marginTop="20dp"
+            android:paddingLeft="20dp"
+            android:editable="false"
+            android:inputType="date"
+            />
+
+            <Button
+                android:id="@+id/calender1"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_gravity="right|bottom"
+                android:layout_marginRight="10dp"
+                android:background="@mipmap/calernder_icon"
+
+                android:layout_marginBottom="4dp"
+
+                />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <EditText
+
+            android:id="@+id/et_practice_start"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:hint="Practice Start Date*"
+            android:background="@drawable/shape_edit_text"
+
+            android:layout_marginTop="20dp"
+
+            android:paddingLeft="20dp"
+
+            android:editable="false"
+            android:inputType="date"
+            />
+
+            <Button
+                android:id="@+id/calender2"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_gravity="right|bottom"
+                android:layout_marginRight="10dp"
+                android:background="@mipmap/calernder_icon"
+                android:layout_marginBottom="5dp"
+
+                />
+         </FrameLayout>
+
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:hint="Licence *"
+            android:background="@drawable/shape_edit_text"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="20dp"
+
+
+            />
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_gravity="bottom|right"
+                android:background="@mipmap/box"
+                android:text="Browse"
+                android:textSize="8sp"
+                android:textColor="@color/colorWhite"
+                android:drawableLeft="@mipmap/attache_ico"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="4dp"
+
+                />
+
+
+
+
+
+        </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:hint="Certificate*"
+            android:background="@drawable/shape_edit_text"
+
+            android:layout_marginTop="20dp"
+
+            android:paddingLeft="20dp"
+
+            />
+
+
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_gravity="bottom|right"
+            android:background="@mipmap/box"
+            android:text="Browse"
+            android:textSize="8sp"
+            android:textColor="@color/colorWhite"
+            android:drawableLeft="@mipmap/attache_ico"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="4dp"
+
+            />
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:hint="Others*"
+            android:background="@drawable/shape_edit_text"
+
+            android:layout_marginTop="20dp"
+
+            android:paddingLeft="20dp"
+            />
+
+
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_gravity="bottom|right"
+            android:background="@mipmap/box"
+            android:text="Browse"
+            android:textSize="8sp"
+            android:textColor="@color/colorWhite"
+            android:drawableLeft="@mipmap/attache_ico"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="4dp"
+
+            />
+
+
+    </FrameLayout>
+
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:hint="Address*"
+            android:background="@drawable/shape_edit_text"
+
+            android:layout_marginTop="20dp"
+
+            android:paddingLeft="20dp"
+            android:inputType="textPostalAddress"
+            />
+
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:hint="Education*"
+            android:background="@drawable/shape_edit_text"
+
+            android:layout_marginTop="20dp"
+
+            android:paddingLeft="20dp"
+            />
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:hint="Hospital's Name*"
+            android:background="@drawable/shape_edit_text"
+
+            android:layout_marginTop="20dp"
+
+            android:paddingLeft="20dp"
+            />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rl1"
+            >
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PAYMENT REFERENCE"
+            android:textSize="15sp"
+
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+
+            />
+
+        <CheckBox
+            android:id="@+id/checkbox1"
+            android:layout_below="@id/tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BMCT Wallet"
+            android:layout_marginRight="60dp"
+            />
+
+        <CheckBox
+            android:id="@+id/checkbox2"
+            android:layout_toRightOf="@id/checkbox1"
+            android:layout_below="@id/tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cash Wallet"
+
+            />
+
+        <CheckBox
+            android:id="@+id/checkbox3"
+            android:layout_below="@id/checkbox1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Both"
+            />
+
+        </RelativeLayout>
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:hint="FREE (BMCT)"
+            android:background="@drawable/shape_edit_text"
+
+            android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            />
+
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:hint="FREE (CASH WALLET)"
+            android:background="@drawable/shape_edit_text"
+
+            android:layout_marginTop="20dp"
+
+            android:paddingLeft="20dp"
+            />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginRight="25dp"
+            >
+        <CheckBox
+            android:id="@+id/checkbox4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I agree to "
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Terms and Conditions"
+            android:textColor="@color/colorBlue"
+
+            />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:text="Submit"
+            android:background="@drawable/shape_button"
+            android:layout_marginTop="20dp"
+
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="40dp"
+            >
+        <TextView
+            android:id="@+id/tv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account?"
+            android:layout_marginTop="20dp"
+
+            />
+
+        <TextView
+            android:id="@+id/signIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign In"
+            android:textColor="@color/colorBlue"
+            android:layout_marginTop="20dp"
+
+            />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
+</ScrollView>
+
+</layout>

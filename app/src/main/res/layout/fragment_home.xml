@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android" >
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:src="@mipmap/banner"
+
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_below="@id/imageView"
+                android:gravity="center"
+                >
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/logo"
+                android:layout_below="@id/imageView"
+
+                />
+
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/logo"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="30dp">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="125dp"
+                        android:layout_row="0"
+                        android:layout_column="1"
+    >
+
+                        <ImageView
+                            android:id="@+id/patient"
+                            android:layout_width="140dp"
+                            android:layout_height="120dp"
+                            android:layout_marginRight="20dp"
+
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/shape_items"
+
+                            android:paddingRight="50dp"
+                            android:src="@mipmap/patient_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="70dp"
+                            android:layout_marginBottom="15dp"
+                            android:text="Patient"
+                            android:textSize="20sp" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/patient_frame2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="125dp"
+                        android:layout_row="0"
+                        android:layout_column="1"
+                        android:visibility="gone"
+                        >
+
+                        <ImageView
+                            android:id="@+id/patient1"
+                            android:layout_width="140dp"
+                            android:layout_height="120dp"
+                            android:layout_marginRight="20dp"
+
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/shape_item_customize"
+
+                            android:paddingRight="50dp"
+                            android:src="@mipmap/patient_icon_sel"
+
+
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="70dp"
+                            android:layout_marginBottom="15dp"
+                            android:text="Patient"
+                            android:textSize="20sp"
+                            android:textColor="@color/colorWhite"
+
+
+                            />
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/check_icon"
+
+                            android:layout_gravity="right"
+
+
+                            />
+
+                    </FrameLayout>
+
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="2">
+
+                        <ImageView
+                            android:id="@+id/doctor"
+                            android:layout_width="140dp"
+                            android:layout_height="120dp"
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/shape_items"
+
+                            android:paddingRight="50dp"
+                            android:src="@mipmap/doc_ic"
+
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+
+                            android:layout_marginLeft="70dp"
+                            android:layout_marginBottom="30dp"
+                            android:text="Doctor"
+                            android:textSize="20sp"
+
+
+                            />
+
+
+                    </FrameLayout>
+
+
+                    <FrameLayout
+
+                        android:id="@+id/doctorFrame2"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="0"
+                        android:layout_column="2"
+
+                        android:visibility="gone"
+                        >
+
+                        <ImageView
+                            android:layout_width="140dp"
+                            android:layout_height="120dp"
+                            android:layout_marginBottom="20dp"
+                            android:background="@drawable/shape_item_customize"
+
+                            android:paddingRight="50dp"
+                            android:src="@mipmap/doc_ic_sel"
+
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+
+                            android:layout_marginLeft="70dp"
+                            android:layout_marginBottom="30dp"
+                            android:text="Doctor"
+                            android:textSize="20sp"
+
+                            android:textColor="@color/colorWhite"
+
+                            />
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/check_icon"
+
+                            android:layout_gravity="right"
+                            />
+
+                    </FrameLayout>
+
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="1"
+                        android:layout_column="1"
+
+                        >
+
+                        <ImageView
+                            android:id="@+id/pharmacist"
+                            android:layout_width="140dp"
+                            android:layout_height="120dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginBottom="30dp"
+
+                            android:background="@drawable/shape_items"
+
+                            android:paddingRight="50dp"
+                            android:src="@mipmap/pharmacist_ico"
+
+
+                            />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginBottom="30dp"
+                            android:text="Pharmacist"
+                            android:textSize="20sp"
+                            />
+
+
+                    </FrameLayout>
+
+
+
+
+                    <FrameLayout
+                        android:id="@+id/pharmacistFrame2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="1"
+                        android:layout_column="1"
+                        android:visibility="gone"
+                        >
+
+                        <ImageView
+                            android:layout_width="140dp"
+                            android:layout_height="120dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginBottom="30dp"
+
+                            android:background="@drawable/shape_item_customize"
+
+                            android:paddingRight="50dp"
+                            android:src="@mipmap/pharmacist_ico_sel"
+
+
+
+                            />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginBottom="30dp"
+                            android:text="Pharmacist"
+                            android:textSize="20sp"
+
+                            android:textColor="@color/colorWhite"
+
+
+                            />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/check_icon"
+
+                            android:layout_gravity="right"
+
+
+                            />
+
+
+                    </FrameLayout>
+
+
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="1"
+                        android:layout_column="2"
+
+                        >
+
+                        <ImageView
+                            android:id="@+id/laboratory"
+                            android:layout_width="140dp"
+                            android:layout_height="120dp"
+                            android:layout_marginBottom="30dp"
+                            android:background="@drawable/shape_items"
+
+                            android:paddingRight="50dp"
+                            android:src="@mipmap/lab_icon"
+
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginBottom="30dp"
+                            android:text="Laboratory"
+                            android:textSize="20sp"
+
+                            />
+
+
+                    </FrameLayout>
+
+
+
+                    <FrameLayout
+                        android:id="@+id/laboratoryFrame2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_row="1"
+                        android:layout_column="2"
+                        android:visibility="gone"
+
+                        >
+
+                    <ImageView
+                        android:layout_width="140dp"
+                        android:layout_height="120dp"
+                        android:layout_marginBottom="30dp"
+                        android:background="@drawable/shape_item_customize"
+
+                        android:paddingRight="50dp"
+                        android:src="@mipmap/lab_icon_sel"
+
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginBottom="30dp"
+                        android:text="Laboratory"
+                        android:textSize="20sp"
+                        android:textColor="@color/colorWhite"
+
+                        />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/check_icon"
+
+                            android:layout_gravity="right"
+
+
+                            />
+
+
+                    </FrameLayout>
+
+                </GridLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</layout>

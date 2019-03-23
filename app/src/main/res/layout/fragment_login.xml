@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentLogin"
+
+    >
+
+ <FrameLayout
+     android:id="@+id/frame_layout_1"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+
+     >
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/banner1"
+
+        />
+     <ImageView
+         android:id="@+id/back_button"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:src="@mipmap/arrow_left"
+         android:layout_marginTop="30dp"
+
+         />
+
+ </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_below="@id/frame_layout_1"
+        android:layout_marginBottom="50dp"
+
+        >
+
+    <ImageView
+        android:id="@+id/image2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/logo"
+
+        />
+
+    <EditText
+        android:id="@+id/et1"
+        android:layout_width="260dp"
+        android:layout_height="42dp"
+        android:hint="Email"
+        android:background="@drawable/shape_edit_text"
+        android:layout_marginTop="30dp"
+
+        android:paddingLeft="20dp"
+        />
+
+    <EditText
+        android:id="@+id/et2"
+        android:layout_width="260dp"
+        android:layout_height="42dp"
+        android:hint="Password"
+        android:height="30dp"
+        android:background="@drawable/shape_edit_text"
+
+        android:layout_marginTop="20dp"
+        android:paddingLeft="20dp"
+        />
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Remeber me"
+        android:layout_marginRight="65dp"
+        />
+    <Button
+        android:id="@+id/b1"
+        android:layout_width="150dp"
+        android:layout_height="42dp"
+        android:text="Sign In"
+        android:layout_marginTop="20dp"
+
+        android:background="@drawable/shape_button"
+        />
+    <TextView
+        android:id="@+id/forgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password?"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        />
+
+    <ImageView
+        android:id="@+id/or"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/or_img"
+        android:layout_marginTop="20dp"
+
+        />
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/ll1"
+        android:gravity="center"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/facebook"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/google"
+            />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Don't have an account ?"
+            />
+
+        <TextView
+            android:id="@+id/tv_sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  Sign up"
+            android:textColor="@color/colorBlue"
+
+            />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>
+    </ScrollView>
+</layout>
