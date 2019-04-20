@@ -4,7 +4,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -19,14 +19,15 @@
 
      >
     <ImageView
-        android:id="@+id/image1"
+        android:id="@+id/image_cover"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@mipmap/banner1"
+        android:scaleType="centerCrop"
 
         />
      <ImageView
-         android:id="@+id/back_button"
+         android:id="@+id/image_view_back_button"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
          android:src="@mipmap/arrow_left"
@@ -37,126 +38,156 @@
  </FrameLayout>
 
     <LinearLayout
-        android:id="@+id/ll1"
+        android:id="@+id/linear_layout1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center"
         android:layout_below="@id/frame_layout_1"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="55dp"
 
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
         >
 
     <ImageView
-        android:id="@+id/image2"
+        android:id="@+id/image_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@mipmap/logo"
+        android:layout_gravity="center"
 
         />
 
     <EditText
-        android:id="@+id/et1"
-        android:layout_width="260dp"
-        android:layout_height="42dp"
-        android:hint="Email"
+        android:id="@+id/edit_text_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_email"
         android:background="@drawable/shape_edit_text"
         android:layout_marginTop="30dp"
 
+
         android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:inputType="textWebEmailAddress"
+        android:maxLines="1"
+
         />
+        <TextView
+            android:id="@+id/tv_error_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/error_email"
+            android:textColor="@color/colorRed"
+            android:visibility="invisible"
+
+            android:paddingLeft="20dp"
+            />
 
     <EditText
-        android:id="@+id/et2"
-        android:layout_width="260dp"
-        android:layout_height="42dp"
-        android:hint="Password"
-        android:height="30dp"
+        android:id="@+id/edit_text_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_password"
         android:background="@drawable/shape_edit_text"
 
-        android:layout_marginTop="20dp"
         android:paddingLeft="20dp"
-        />
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
 
-    <CheckBox
-        android:id="@+id/checkbox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:password="true"
+        android:inputType="textWebPassword"
+        android:maxLines="1"
 
-        android:text="Remeber me"
-        android:layout_marginRight="65dp"
-        />
+       />
+        <TextView
+            android:id="@+id/tv_error_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorRed"
+            android:text="@string/error_password"
+            android:paddingLeft="20dp"
+            android:visibility="invisible"
+            />
+
+        <CheckBox
+            android:id="@+id/checkbox_remember_me"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="20dp"
+            android:buttonTint="@color/colorEditTextBackground"
+            android:text="@string/remember_me"
+            android:textColor="@color/colorBlack"
+
+            />
     <Button
-        android:id="@+id/b1"
-        android:layout_width="150dp"
-        android:layout_height="42dp"
-        android:text="Sign In"
-        android:layout_marginTop="20dp"
-
+        android:id="@+id/button_log_in"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:text="@string/sign_in"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorWhite"
         android:background="@drawable/shape_button"
+        android:layout_gravity="center"
         />
     <TextView
-        android:id="@+id/forgotPassword"
+        android:id="@+id/text_view_forgot_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Forgot Password?"
-        android:textSize="20dp"
-        android:layout_marginTop="20dp"
+        android:text="@string/forgot_password"
+        android:textSize="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:textColor="@color/colorBlack"
         />
 
     <ImageView
-        android:id="@+id/or"
+        android:id="@+id/image_view_or"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@mipmap/or_img"
         android:layout_marginTop="20dp"
+        android:layout_gravity="center"
 
         />
 
     <LinearLayout
-        android:id="@+id/ll2"
-        android:layout_width="wrap_content"
+        android:id="@+id/linear_layout2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_below="@id/ll1"
         android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:weightSum="2"
         >
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/facebook"
+            android:layout_weight="1"
             />
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/google"
+            android:layout_weight="1"
             />
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/ll3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-
         <TextView
-            android:id="@+id/tv1"
+            android:id="@+id/text_view_sign_up"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Don't have an account ?"
+            android:text="@string/no_account"
+            android:layout_gravity="center
+"
             />
 
-        <TextView
-            android:id="@+id/tv_sign_up"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="  Sign up"
-            android:textColor="@color/colorBlue"
-
-            />
-
-        </LinearLayout>
 
     </LinearLayout>
 

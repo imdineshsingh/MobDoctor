@@ -3,4 +3,81 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--strings for hints-->
+    <string name="hint_first_name">First Name*</string>
+    <string name="hint_last_name">Last Name</string>
+    <string name="hint_email">Email*</string>
+
+    <string name="hint_mobile">Phone Number*</string>
+    <string name="hint_password">Password*</string>
+    <string name="hint_confirm_password">Confirm Password*</string>
+    <string name="hint_dob">Select Your DOB*</string>
+    <string name="hint_practice_date">Practice Start Date*</string>
+    <string name="hint_licence">License*</string>
+    <string name="hint_certificate">Certificate*</string>
+    <string name="hint_others">Others*</string>
+    <string name="hint_address">Address*</string>
+    <string name="hint_education">Education*</string>
+    <string name="hint_hospital_name">Hospital Name</string>
+    <string name="hint_bmct">FREE(BMCT)</string>
+    <string name="hint_cash_wallet">FREE(CASH WALLET)</string>
+
+
+    <!--checkbox strings-->
+
+    <string name="bmct_wallet">BMCT Wallet</string>
+    <string name="cash_wallet">Cash Wallet</string>
+    <string name="both">Both</string>
+
+    <!--other Strings-->
+    <string name="tnc">I agree to Terms and Conditions</string>
+
+    <string name="account_exist">ALREADY HAVE AN ACCOUNT? LOG IN</string>
+    <string name="sign_in">LOGIN</string>
+    <string name="submit">Submit</string>
+    <string name="browse">Browse</string>
+    <string name="payment_ref"><b>PAYMENT PREFERENCE</b></string>
+    <string name="register"><b>REGISTER NOW</b></string>
+
+
+    <!--   Strings home fragment -->
+
+    <string name="patient">Patient</string>
+    <string name="doctor">Doctor</string>
+    <string name="pharmacist">Pharmacist</string>
+    <string name="laboratory">Laboratory</string>
+
+
+    <!-- Strings Log-in Fragments-->
+
+    <string name="remember_me"><b>Remember Me</b></string>
+    <string name="forgot_password"><b>Forgot Password?</b></string>
+    <string name="no_account"><b>Don\'t have an account?</b> Signup</string>
+
+
+    <!--   Strings  Errors -->
+
+    <string name="error_email">*Please enter valid email</string>
+    <string name="error_password">*Please enter valid password</string>
+    <string name="error_first_name">*Please enter valid name</string>
+    <string name="error_phone">*Please enter valid phone</string>
+    <string name="error_confirm_password">*Password must be same</string>
+    <string name="error_dob">*Please select your DOB</string>
+    <string name="error_address">*Please enter your address</string>
+    <string name="error_education">*Please enter your education details</string>
+    <string name="error_tnc">*You must agree with terms and conditions</string>
+    <string name="error_practice_start_date">*You must select practice start date</string>
+    <string name="error_payment_preference">*You must select atleast one payment reference</string>
+
+
+    <string name="error_empty_name">*Name can\'t be empty</string>
+    <string name="error_empty_email">*Email can\'t be empty</string>
+    <string name="error_empty_phone">*Phone can\'t be empty</string>
+    <string name="error_empty_password">*Password can\'t be empty</string>
+    <string name="error_empty_confirm_password">*Confirm Password can\'t be empty</string>
+
+    <string name="error_empty_first_name">*First name can\'t be empty</string>
+    <string name="error_empty">*Field can\'t be empty</string>
+
 </resources>

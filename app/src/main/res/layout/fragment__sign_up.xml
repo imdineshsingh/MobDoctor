@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 <ScrollView android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android" >
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    >
+<RelativeLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".Fragment_SignUp">
 
     <LinearLayout
-        android:id="@+id/ll1"
+        android:id="@+id/linear_layout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -22,14 +22,15 @@
             android:layout_gravity="center_vertical"
             >
             <ImageView
-                android:id="@+id/iv1"
+                android:id="@+id/image_view_cover"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/banner2"
+                android:scaleType="centerCrop"
 
                 />
             <ImageView
-                android:id="@+id/back_button"
+                android:id="@+id/image_view_back_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/arrow_left"
@@ -38,7 +39,7 @@
                 />
 
             <TextView
-                    android:id="@+id/tv1"
+                    android:id="@+id/text_view_heading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="CREATE ACCOUNT WITH US"
@@ -51,7 +52,7 @@
                     />
 
             <ImageView
-                android:id="@+id/iv2"
+                android:id="@+id/image_view_profile"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:src="@mipmap/pic"
@@ -61,6 +62,7 @@
                 />
 
             <ImageView
+                android:id="@+id/image_view_camera"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -76,142 +78,231 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/ll2"
+        android:id="@+id/linear_layout2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center_horizontal"
-        android:layout_below="@id/ll1"
-        android:layout_marginTop="20dp"
+        android:layout_below="@id/linear_layout1"
 
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="60dp"
+
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
         >
 
 
         <EditText
 
-            android:id="@+id/et1"
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:hint="First Name*"
+            android:id="@+id/edit_text_first_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_first_name"
             android:background="@drawable/shape_edit_text"
-
-            android:paddingLeft="20dp"
             android:inputType="textPersonName|textCapWords"
             android:maxLines="1"
 
+            android:layout_marginTop="20dp"
+
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:imeOptions="actionNext"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_error_first_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/error_first_name"
+            android:textColor="@color/colorRed"
+            android:paddingLeft="20dp"
+            android:visibility="invisible"
             />
 
         <EditText
-            android:id="@+id/et2"
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:hint="Last Name*"
+            android:id="@+id/edit_text_last_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_last_name"
             android:background="@drawable/shape_edit_text"
-            android:layout_marginTop="20dp"
-            android:paddingLeft="20dp"
             android:inputType="textPersonName|textCapWords"
             android:maxLines="1"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:imeOptions="actionNext"
             />
 
 
+        <EditText
+            android:id="@+id/edit_text_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_email"
+            android:background="@drawable/shape_edit_text"
+            android:inputType="textWebEmailAddress"
+            android:maxLines="1"
+
+            android:layout_marginTop="15dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:imeOptions="actionNext"
+           />
+
+        <TextView
+            android:id="@+id/tv_error_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/error_email"
+            android:textColor="@color/colorRed"
+            android:paddingLeft="20dp"
+            android:visibility="invisible"
+            />
+
+
+
         <FrameLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
             >
 
             <EditText
-                android:id="@+id/et_phoneNumber"
-                android:layout_width="300dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="20dp"
+                android:id="@+id/edit_text_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:background="@drawable/shape_edit_text"
-                android:hint="Phone Number*"
+                android:hint="@string/hint_mobile"
 
-                android:paddingLeft="80dp"
                 android:inputType="phone"
                 android:digits="0123456789"
-                android:imeOptions="actionNext"
                 android:maxLength="10"
                 android:maxLines="1"
 
 
+                android:paddingLeft="85dp"
+                android:paddingStart="85dp"
 
-                />
+                android:paddingEnd="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
 
+                android:imeOptions="actionNext"
+            />
             <Spinner
-                android:id="@+id/spinner"
-                android:layout_width="50dp"
+                android:id="@+id/spinner_country_code"
+                android:layout_width="70dp"
                 android:layout_height="30dp"
-                android:layout_marginTop="26dp"
+                android:layout_marginTop="6dp"
                 android:layout_marginLeft="10dp"
 
                 android:textSize="3sp"
                 android:background="@drawable/shape_spinner"
-
-
                 >
-
 
             </Spinner>
 
+
+
         </FrameLayout>
 
-        <EditText
-            android:id="@+id/et4"
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:hint="Password *"
-            android:background="@drawable/shape_edit_text"
-
-            android:layout_marginTop="20dp"
-
+        <TextView
+            android:id="@+id/tv_error_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/error_phone"
+            android:textColor="@color/colorRed"
             android:paddingLeft="20dp"
+            android:visibility="invisible"
+            />
+        <EditText
+            android:id="@+id/edit_text_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_password"
+            android:background="@drawable/shape_edit_text"
             android:inputType="textWebPassword"
-
             android:password="true"
             android:maxLines="1"
 
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:imeOptions="actionNext"
             />
 
 
-        <EditText
-            android:id="@+id/et5"
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:hint="Confirm Password*"
-            android:background="@drawable/shape_edit_text"
-
-            android:layout_marginTop="20dp"
-
+        <TextView
+            android:id="@+id/tv_error_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/error_password"
+            android:textColor="@color/colorRed"
             android:paddingLeft="20dp"
+            android:visibility="invisible"
+            />
+
+        <EditText
+            android:id="@+id/edit_text_confirm_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_confirm_password"
+            android:background="@drawable/shape_edit_text"
             android:inputType="textWebPassword"
 
             android:password="true"
             android:maxLines="1"
+
+
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:imeOptions="actionDone"
+           />
+
+        <TextView
+            android:id="@+id/tv_error_confirm_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/error_confirm_password"
+            android:textColor="@color/colorRed"
+            android:paddingLeft="20dp"
+            android:visibility="invisible"
             />
         <FrameLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
 
             >
-        <EditText
-            android:id="@+id/dob"
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:hint="Select Your DOB*"
-
+        <TextView
+            android:id="@+id/tv_select_dob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_dob"
+            android:textSize="18sp"
             android:background="@drawable/shape_edit_text"
-
-            android:layout_marginTop="20dp"
-            android:paddingLeft="20dp"
             android:editable="false"
             android:inputType="date"
+
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+
+            tools:ignore="TextViewEdits"
+            android:imeOptions="actionDone"
+
             />
 
             <Button
-                android:id="@+id/calender1"
+                android:id="@+id/calender_dob"
                 android:layout_width="40dp"
                 android:layout_height="30dp"
                 android:layout_gravity="right|bottom"
@@ -223,28 +314,43 @@
                 />
 
         </FrameLayout>
+        <TextView
+            android:id="@+id/tv_error_dob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/error_dob"
+            android:textColor="@color/colorRed"
+            android:paddingLeft="20dp"
+            android:visibility="invisible"
+
+            />
 
         <FrameLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
-        <EditText
+        <TextView
 
-            android:id="@+id/et_practice_start"
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:hint="Practice Start Date*"
+            android:id="@+id/select_practice_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_practice_date"
+            android:textSize="18sp"
             android:background="@drawable/shape_edit_text"
-
-            android:layout_marginTop="20dp"
-
-            android:paddingLeft="20dp"
 
             android:editable="false"
             android:inputType="date"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+
+            tools:ignore="TextViewEdits"
+
+            android:imeOptions="actionNext"
             />
 
             <Button
-                android:id="@+id/calender2"
+                android:id="@+id/calender_practice_start"
                 android:layout_width="40dp"
                 android:layout_height="30dp"
                 android:layout_gravity="right|bottom"
@@ -256,26 +362,46 @@
          </FrameLayout>
 
 
-        <FrameLayout
+        <TextView
+            android:id="@+id/tv_error_practice_start_date"
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/error_practice_start_date"
+            android:textColor="@color/colorRed"
+            android:paddingLeft="20dp"
+            android:visibility="invisible"
+            />
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-        <EditText
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:hint="Licence *"
+        <TextView
+            android:id="@+id/text_view_licence"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_licence"
             android:background="@drawable/shape_edit_text"
-            android:layout_marginTop="20dp"
+            android:textSize="18sp"
+
             android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:maxLines="1"
+            android:imeOptions="actionDone"
+
+            tools:ignore="TextViewEdits"/>
 
 
-            />
             <Button
+                android:id="@+id/browse_licence"
                 android:layout_width="70dp"
                 android:layout_height="30dp"
                 android:layout_gravity="bottom|right"
                 android:background="@mipmap/box"
-                android:text="Browse"
+                android:text="@string/browse"
                 android:textSize="8sp"
                 android:textColor="@color/colorWhite"
                 android:drawableLeft="@mipmap/attache_ico"
@@ -283,36 +409,41 @@
                 android:layout_marginBottom="4dp"
 
                 />
-
-
-
-
-
         </FrameLayout>
 
     <FrameLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <EditText
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:hint="Certificate*"
+        <TextView
+            android:id="@+id/text_view_certificate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_certificate"
             android:background="@drawable/shape_edit_text"
+            android:textSize="18sp"
 
             android:layout_marginTop="20dp"
 
-            android:paddingLeft="20dp"
 
-            />
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:maxLines="1"
+
+            android:imeOptions="actionNext"
+            tools:ignore="TextViewEdits"/>
+
 
 
         <Button
+            android:id="@+id/browse_certificate"
             android:layout_width="70dp"
             android:layout_height="30dp"
             android:layout_gravity="bottom|right"
             android:background="@mipmap/box"
-            android:text="Browse"
+            android:text="@string/browse"
             android:textSize="8sp"
             android:textColor="@color/colorWhite"
             android:drawableLeft="@mipmap/attache_ico"
@@ -325,27 +456,39 @@
     </FrameLayout>
 
     <FrameLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <EditText
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:hint="Others*"
+        <TextView
+            android:id="@+id/text_view_others"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_others"
             android:background="@drawable/shape_edit_text"
 
             android:layout_marginTop="20dp"
-
+            android:textSize="18sp"
             android:paddingLeft="20dp"
-            />
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:maxLines="1"
+
+            android:imeOptions="actionNext"
+            tools:ignore="TextViewEdits"
+
+           />
+
+
 
 
         <Button
+            android:id="@+id/browse_others"
             android:layout_width="70dp"
             android:layout_height="30dp"
             android:layout_gravity="bottom|right"
             android:background="@mipmap/box"
-            android:text="Browse"
+            android:text="@string/browse"
             android:textSize="8sp"
             android:textColor="@color/colorWhite"
             android:drawableLeft="@mipmap/attache_ico"
@@ -359,51 +502,102 @@
 
 
         <EditText
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:hint="Address*"
+            android:id="@+id/edit_text_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_address"
             android:background="@drawable/shape_edit_text"
 
             android:layout_marginTop="20dp"
 
-            android:paddingLeft="20dp"
             android:inputType="textPostalAddress"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:maxLines="1"
+
+            android:imeOptions="actionNext"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_error_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/error_address"
+            android:textColor="@color/colorRed"
+            android:paddingLeft="20dp"
+            android:visibility="invisible"
             />
 
 
         <EditText
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:hint="Education*"
+            android:id="@+id/edit_text_education"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_education"
             android:background="@drawable/shape_edit_text"
 
-            android:layout_marginTop="20dp"
+
 
             android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+
+            android:maxLines="1"
+            android:imeOptions="actionNext"
+            android:autofillHints="@string/hint_education"
+            tools:targetApi="o"
+            android:inputType="text"/>
+
+
+        <TextView
+            android:id="@+id/tv_error_education"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/error_education"
+            android:textColor="@color/colorRed"
+            android:visibility="invisible"
+            android:paddingLeft="20dp"
+
             />
 
         <EditText
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:hint="Hospital's Name*"
+            android:id="@+id/edit_text_hospital_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_hospital_name"
             android:background="@drawable/shape_edit_text"
 
-            android:layout_marginTop="20dp"
-
             android:paddingLeft="20dp"
-            />
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:maxLines="1"
+            android:imeOptions="actionDone"
+
+            android:autofillHints="@string/hint_hospital_name"
+            tools:targetApi="o"
+            android:inputType="text"/>
+
+
 
         <RelativeLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/rl1"
+            android:id="@+id/relative_layout"
+            android:paddingLeft="10dp"
+
             >
         <TextView
-            android:id="@+id/tv3"
-            android:layout_width="wrap_content"
+            android:id="@+id/text_view_payment_reference"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="PAYMENT REFERENCE"
+            android:text="@string/payment_ref"
             android:textSize="15sp"
+            android:textColor="@color/colorBlack"
 
             android:layout_marginRight="40dp"
             android:layout_marginTop="10dp"
@@ -411,120 +605,139 @@
             />
 
         <CheckBox
-            android:id="@+id/checkbox1"
-            android:layout_below="@id/tv3"
+            android:id="@+id/checkbox_bmct_wallet"
+            android:layout_below="@id/text_view_payment_reference"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="BMCT Wallet"
+            android:text="@string/bmct_wallet"
             android:layout_marginRight="60dp"
+            android:buttonTint="@color/colorEditTextBackground"
             />
 
         <CheckBox
-            android:id="@+id/checkbox2"
-            android:layout_toRightOf="@id/checkbox1"
-            android:layout_below="@id/tv3"
+            android:id="@+id/checkbox_cash_wallet"
+            android:layout_toRightOf="@id/checkbox_bmct_wallet"
+            android:layout_below="@id/text_view_payment_reference"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cash Wallet"
+            android:text="@string/cash_wallet"
+            android:buttonTint="@color/colorEditTextBackground"
 
             />
 
         <CheckBox
-            android:id="@+id/checkbox3"
-            android:layout_below="@id/checkbox1"
+            android:id="@+id/checkbox_both"
+            android:layout_below="@id/checkbox_bmct_wallet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Both"
+            android:text="@string/both"
+            android:buttonTint="@color/colorEditTextBackground"
             />
+            <TextView
+                android:id="@+id/tv_error_payment_reference"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                />
 
         </RelativeLayout>
+
         <EditText
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:hint="FREE (BMCT)"
+            android:id="@+id/edit_text_free_bmct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_bmct"
             android:background="@drawable/shape_edit_text"
-
             android:layout_marginTop="10dp"
+
             android:paddingLeft="20dp"
-            />
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:maxLines="1"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:autofillHints="@string/hint_bmct"
+            tools:targetApi="o"/>
+
 
         <EditText
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:hint="FREE (CASH WALLET)"
+            android:id="@+id/edit_text_free_cash_wallet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_cash_wallet"
             android:background="@drawable/shape_edit_text"
 
             android:layout_marginTop="20dp"
 
             android:paddingLeft="20dp"
-            />
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:maxLines="1"
+
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:autofillHints="@string/hint_cash_wallet"
+            tools:targetApi="o"/>
 
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginRight="25dp"
-            >
         <CheckBox
-            android:id="@+id/checkbox4"
-            android:layout_width="wrap_content"
+            android:id="@+id/checkbox_terms_and_conditions"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="I agree to "
-            />
+            android:text="@string/tnc"
+            android:layout_marginTop="10dp"
+            android:buttonTint="@color/colorEditTextBackground"
 
+            />
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/tv_error_terms_and_conditions"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Terms and Conditions"
-            android:textColor="@color/colorBlue"
-
+            android:text="@string/error_tnc"
+            android:textColor="@color/colorRed"
+            android:paddingLeft="20dp"
+            android:visibility="invisible"
             />
 
-        </LinearLayout>
 
         <Button
-            android:id="@+id/button"
-            android:layout_width="200dp"
-            android:layout_height="40dp"
-            android:text="Submit"
+            android:id="@+id/button_register_now"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+
             android:background="@drawable/shape_button"
-            android:layout_marginTop="20dp"
+            android:text="@string/register"
+            android:textSize="20sp"
+            android:textColor="@color/colorWhite"
 
-            />
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="40dp"
-            >
-        <TextView
-            android:id="@+id/tv4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Already have an account?"
-            android:layout_marginTop="20dp"
+
 
             />
 
         <TextView
-            android:id="@+id/signIn"
+            android:id="@+id/text_view_account_exist"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sign In"
-            android:textColor="@color/colorBlue"
-            android:layout_marginTop="20dp"
+            android:text="@string/account_exist"
+
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
 
             />
+
+
         </LinearLayout>
 
-    </LinearLayout>
+    </RelativeLayout>
 
-
-
-
-</RelativeLayout>
-</ScrollView>
+    </ScrollView>
 
 </layout>

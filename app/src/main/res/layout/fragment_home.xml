@@ -17,9 +17,11 @@
                 android:layout_height="wrap_content"
 
                 android:src="@mipmap/banner"
-
+                android:scaleType="centerCrop"
                 />
+
             <LinearLayout
+                android:id="@+id/linear_layout_main"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
@@ -28,7 +30,7 @@
                 >
             <ImageView
                 android:id="@+id/logo"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/logo"
                 android:layout_below="@id/imageView"
@@ -36,6 +38,7 @@
                 />
 
                 <GridLayout
+                    android:id="@+id/grid_layout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/logo"
@@ -43,11 +46,11 @@
                     android:layout_marginBottom="30dp">
 
                     <FrameLayout
+                        android:id="@+id/frame_layout_patient"
                         android:layout_width="wrap_content"
                         android:layout_height="125dp"
                         android:layout_row="0"
-                        android:layout_column="1"
-    >
+                        android:layout_column="1">
 
                         <ImageView
                             android:id="@+id/patient"
@@ -67,13 +70,13 @@
                             android:layout_gravity="bottom"
                             android:layout_marginLeft="70dp"
                             android:layout_marginBottom="15dp"
-                            android:text="Patient"
+                            android:text="@string/patient"
                             android:textSize="20sp" />
 
                     </FrameLayout>
 
                     <FrameLayout
-                        android:id="@+id/patient_frame2"
+                        android:id="@+id/frame_layout_patient_hidden"
                         android:layout_width="wrap_content"
                         android:layout_height="125dp"
                         android:layout_row="0"
@@ -102,7 +105,7 @@
                             android:layout_gravity="bottom"
                             android:layout_marginLeft="70dp"
                             android:layout_marginBottom="15dp"
-                            android:text="Patient"
+                            android:text="@string/patient"
                             android:textSize="20sp"
                             android:textColor="@color/colorWhite"
 
@@ -124,6 +127,7 @@
 
 
                     <FrameLayout
+                        android:id="@+id/frame_layout_doctor"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_row="0"
@@ -148,7 +152,7 @@
 
                             android:layout_marginLeft="70dp"
                             android:layout_marginBottom="30dp"
-                            android:text="Doctor"
+                            android:text="@string/doctor"
                             android:textSize="20sp"
 
 
@@ -159,9 +163,7 @@
 
 
                     <FrameLayout
-
-                        android:id="@+id/doctorFrame2"
-
+                        android:id="@+id/frame_layout_doctor_hidden"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_row="0"
@@ -188,7 +190,7 @@
 
                             android:layout_marginLeft="70dp"
                             android:layout_marginBottom="30dp"
-                            android:text="Doctor"
+                            android:text="@string/doctor"
                             android:textSize="20sp"
 
                             android:textColor="@color/colorWhite"
@@ -208,6 +210,7 @@
 
 
                     <FrameLayout
+                        android:id="@+id/frame_layout_pharmacist"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_row="1"
@@ -238,7 +241,7 @@
 
                             android:layout_marginLeft="25dp"
                             android:layout_marginBottom="30dp"
-                            android:text="Pharmacist"
+                            android:text="@string/pharmacist"
                             android:textSize="20sp"
                             />
 
@@ -249,7 +252,7 @@
 
 
                     <FrameLayout
-                        android:id="@+id/pharmacistFrame2"
+                        android:id="@+id/frame_layout_pharmacist_hidden"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_row="1"
@@ -280,7 +283,7 @@
 
                             android:layout_marginLeft="25dp"
                             android:layout_marginBottom="30dp"
-                            android:text="Pharmacist"
+                            android:text="@string/pharmacist"
                             android:textSize="20sp"
 
                             android:textColor="@color/colorWhite"
@@ -303,6 +306,7 @@
 
 
                     <FrameLayout
+                        android:id="@+id/frame_layout_laboratory"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_row="1"
@@ -329,7 +333,7 @@
                             android:layout_gravity="bottom"
                             android:layout_marginLeft="25dp"
                             android:layout_marginBottom="30dp"
-                            android:text="Laboratory"
+                            android:text="@string/laboratory"
                             android:textSize="20sp"
 
                             />
@@ -340,7 +344,7 @@
 
 
                     <FrameLayout
-                        android:id="@+id/laboratoryFrame2"
+                        android:id="@+id/frame_layout_laboratory_hidden"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_row="1"
@@ -368,7 +372,7 @@
                         android:layout_gravity="bottom"
                         android:layout_marginLeft="25dp"
                         android:layout_marginBottom="30dp"
-                        android:text="Laboratory"
+                        android:text="@string/laboratory"
                         android:textSize="20sp"
                         android:textColor="@color/colorWhite"
 

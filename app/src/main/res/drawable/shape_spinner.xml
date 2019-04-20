@@ -1,10 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
 
-    <solid android:color="#806E6E6F"/>
-    <corners android:radius="10dp"/>
+    >
+
+    <solid android:color="#806E6E6F" />
+    <corners android:radius="10dp" />
+
+
 
 
 </shape>
 
+<!--
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#806E6E6F" />
+            <corners android:radius="10dp" />
+
+        </shape>
+
+    </item>
+
+    <item>
+
+        <bitmap android:src="@drawable/ic_arrow_drop_down" />
+
+    </item>
+
+</layer-list>
+-->

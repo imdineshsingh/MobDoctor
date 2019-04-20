@@ -3,6 +3,9 @@ package com.dinesh_singh.mobdoctor;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.style.ClickableSpan;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity  {
 
@@ -24,6 +27,9 @@ public class MainActivity extends AppCompatActivity  {
         getSupportFragmentManager().beginTransaction().replace(R.id.place_holder,fragment).commit();
 
     }
+
+
+
 
 
 }

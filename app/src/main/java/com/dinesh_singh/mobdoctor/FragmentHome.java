@@ -2,15 +2,11 @@ package com.dinesh_singh.mobdoctor;
 
 
 import android.databinding.DataBindingUtil;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.dinesh_singh.mobdoctor.databinding.FragmentHomeBinding;
 
@@ -29,7 +25,7 @@ public class FragmentHome extends Fragment implements  View.OnClickListener{
 
 
     @Override
-    public View onCreateView( LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
                               Bundle savedInstanceState ) {
         // Inflate the layout for this fragment
 
@@ -42,7 +38,7 @@ public class FragmentHome extends Fragment implements  View.OnClickListener{
         binding.doctor.setOnClickListener(this);
         binding.pharmacist.setOnClickListener(this);
         binding.laboratory.setOnClickListener(this);
-        binding.patientFrame2.setOnClickListener(this);
+        binding.frameLayoutPatientHidden.setOnClickListener(this);
 
         return v;
 
@@ -55,26 +51,28 @@ public class FragmentHome extends Fragment implements  View.OnClickListener{
             case R.id.patient:
 
                 unSelect();
-                binding.patientFrame2.setVisibility(View.VISIBLE);
+                binding.frameLayoutPatientHidden.setVisibility(View.VISIBLE);
+                assert getFragmentManager() != null;
+                getFragmentManager().beginTransaction().replace(R.id.place_holder,new PatientLoginFragment()).addToBackStack("").commit();
                 break;
             case R.id.doctor:
 
                 unSelect();
-                binding.doctorFrame2.setVisibility(View.VISIBLE);
-                getFragmentManager().beginTransaction().replace(R.id.place_holder,new FragmentLogin()).addToBackStack("chhutki").commit();
-
+                binding.frameLayoutDoctorHidden.setVisibility(View.VISIBLE);
+                assert getFragmentManager() != null;
+                getFragmentManager().beginTransaction().replace(R.id.place_holder,new FragmentLogin()).addToBackStack("").commit();
 
                 break;
 
             case R.id.pharmacist:
                 unSelect();
-                binding.pharmacistFrame2.setVisibility(View.VISIBLE);
+                binding.frameLayoutPharmacistHidden.setVisibility(View.VISIBLE);
                 break;
 
             case R.id.laboratory:
 
                 unSelect();
-                binding.laboratoryFrame2.setVisibility(View.VISIBLE);
+                binding.frameLayoutLaboratoryHidden.setVisibility(View.VISIBLE);
                 break;
 
             default:
@@ -88,11 +86,11 @@ public class FragmentHome extends Fragment implements  View.OnClickListener{
     private void unSelect()
     {
 
-        binding.doctorFrame2.setVisibility(View.GONE);
-        binding.patientFrame2.setVisibility(View.GONE);
+        binding.frameLayoutDoctorHidden.setVisibility(View.GONE);
+        binding.frameLayoutPatientHidden.setVisibility(View.GONE);
 
-        binding.pharmacistFrame2.setVisibility(View.GONE);
-        binding.laboratoryFrame2.setVisibility(View.GONE);
+        binding.frameLayoutPharmacistHidden.setVisibility(View.GONE);
+        binding.frameLayoutLaboratoryHidden.setVisibility(View.GONE);
 
     }
 

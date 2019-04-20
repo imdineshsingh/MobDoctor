@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".PatientLoginFragment"
+    android:background="@drawable/gradient_login_bg_patient"
+
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+
+    android:paddingTop="60dp"
+    android:paddingBottom="60dp"
+
+    android:id="@+id/coordinator_layout"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:background="@drawable/patient_layout_background"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            >
+
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+
+
+
+                >
+            <RadioButton
+                android:id="@+id/rb_tv_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Text view error"
+
+                />
+                <RadioButton
+                    android:id="@+id/rb_box_error"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="box error"
+
+                    android:checked="true"
+
+                    />
+
+
+            </RadioGroup>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                app:errorEnabled="true"
+                android:layout_marginTop="5dp"
+
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                app:hintEnabled="true"
+                app:boxStrokeColor="@color/colorYellow"
+                android:shadowColor="@color/colorRed"
+
+                android:textColorHint="@color/colorBlack"
+
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/tiet_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:hint="Full Name"
+                    android:textColorHint="@color/colorRed"
+                    android:inputType="textPersonName|textCapWords"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:lines="1"
+                    android:maxLength="25"
+
+                    android:drawableStart="@drawable/ic_person"
+
+
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                app:errorEnabled="true"
+
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+
+                android:textColorHint="@color/colorBlack"
+
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/tiet_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:hint="Email Address"
+                    android:inputType="textWebEmailAddress"
+                    android:lines="1"
+
+                    android:maxLength="20"
+
+                    android:drawableStart="@drawable/ic_email_black"
+
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                app:errorEnabled="true"
+                app:counterEnabled="true"
+                app:counterMaxLength="10"
+
+
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+
+
+                android:textColorHint="@color/colorBlack"
+
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/tiet_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:hint="Mobile Number"
+                    android:inputType="phone"
+                    android:lines="1"
+                    android:maxLength="10"
+                    android:digits="0123456789+"
+
+                    android:drawableStart="@drawable/ic_phone"
+                    />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                app:errorEnabled="true"
+                app:counterEnabled="true"
+
+                app:counterMaxLength="16"
+                android:maxLength="16"
+
+                android:password="true"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/colorDartBlue"
+
+
+                android:textColorHint="@color/colorBlack"
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/tiet_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:hint="Your Password"
+                    android:inputType="textWebPassword"
+                    android:lines="1"
+                    android:maxLength="16"
+
+
+                    android:drawableStart="@drawable/ic_lock"
+                    android:password="true"
+
+                    />
+
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                app:errorEnabled="true"
+                app:counterEnabled="true"
+                app:counterMaxLength="16"
+                android:maxLength="16"
+
+
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/colorDartBlue"
+
+
+                android:textColorHint="@color/colorBlack"
+                >
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/tiet_confirm_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:hint="Confirm Password"
+                    android:inputType="textPersonName|textCapWords"
+                    android:lines="1"
+
+                    android:drawableStart="@drawable/ic_lock"
+                    android:password="true"
+
+                    />
+
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginBottom="50dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+
+                android:background="@drawable/shape_button_login"
+                android:text="Submit"
+                android:textSize="20sp"
+                android:textColor="@color/colorWhite"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>
+
+</layout>
